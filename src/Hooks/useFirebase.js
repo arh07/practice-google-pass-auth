@@ -6,6 +6,7 @@ import app from "../Firebase/firebase.init";
 
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
+
 const useFirebase = () => {
     const [user, setUser] = useState();
 
@@ -19,6 +20,8 @@ const useFirebase = () => {
                 console.log(user)
             })
     }
+
+
 
     // sign in end
 
@@ -39,7 +42,8 @@ const useFirebase = () => {
     return {
         user,
         signWithGoogle,
-        handleSignOut
+        handleSignOut,
+
     }
 }
 export default useFirebase;
